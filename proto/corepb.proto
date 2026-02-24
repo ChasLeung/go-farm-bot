@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "gofarm/proto/corepb;corepb";
+
+package corepb;
+
+// ============ 通用物品 ============
+message Item {
+    int64 id = 1;           // 物品ID
+    int64 count = 2;        // 数量
+    int64 expire_time = 3;  // 过期时间
+    // field 4 reserved
+    int64 uid = 5;          // 唯一ID
+    int64 create_time = 6;  // 创建时间
+}
+
+// 物品变更
+message ItemChg {
+    Item item = 1;          // 物品信息
+    int64 delta = 2;        // 变化量
+}
+
+// 物品背包
+message ItemBag {
+    repeated Item items = 1;
+}

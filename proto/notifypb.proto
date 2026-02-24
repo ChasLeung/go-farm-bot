@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "gofarm/proto/gamepb/notifypb;notifypb";
+
+package gamepb.notifypb;
+
+import "corepb.proto";
+
+// ============ 物品变化通知 ============
+message ItemNotify {
+    repeated corepb.ItemChg items = 1;
+}
