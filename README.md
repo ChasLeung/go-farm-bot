@@ -26,7 +26,7 @@
 ```bash
 # 克隆仓库
 git clone https://github.com/ChasLeung/go-farm-bot.git
-cd gofarm
+cd go-farm-bot
 
 # 编译
 go build -o gofarm.exe ./cmd/gofarm
